@@ -5,8 +5,9 @@
  * Layout-specific actions and symbols.
  ******************************************************************************/
 
-// Uncomment one of the following lines if using a non-QWERTY layout:
+// Uncomment one of the following to match the layout installed on your OS:
 
+// #define KB_LAYOUT_QWERTY
 // #define KB_LAYOUT_QWERTY_LAFAYETTE
 // #define KB_LAYOUT_AZERTY
 #define KB_LAYOUT_ERGOL

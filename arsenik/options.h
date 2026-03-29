@@ -72,10 +72,10 @@
 // on keyboard layout used on your computer. If they don't match up some
 // characters may not be correctly placed or missing entirely. If multiple
 // options are toggled at the same time, the first one is chosen.
-#define ARSENIK_HOST_LAYOUT_QWERTY
-// #define ARSENIK_HOST_LAYOUT_AZERTY
-// #define ARSENIK_HOST_LAYOUT_ERGOL
-// #define ARSENIK_HOST_LAYOUT_BEPO
-// #define ARSENIK_HOST_LAYOUT_DVORAK
-// #define ARSENIK_HOST_LAYOUT_COLEMAK
-// #define ARSENIK_HOST_LAYOUT_WORKMAN
+#define KB_LAYOUT_QWERTY
+// #define KB_LAYOUT_AZERTY
+// #define KB_LAYOUT_ERGOL
+// #define KB_LAYOUT_BEPO
+// #define KB_LAYOUT_DVORAK
+// #define KB_LAYOUT_COLEMAK
+// #define KB_LAYOUT_WORKMAN

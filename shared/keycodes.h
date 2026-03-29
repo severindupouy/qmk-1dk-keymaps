@@ -16,13 +16,15 @@
 // │          Keyboard layout specific declarations          │
 // ╰─────────────────────────────────────────────────────────╯
 
-#if defined ARSENIK_HOST_LAYOUT_QWERTY
+#if defined KB_LAYOUT_QWERTY
 #    define AS(stripped_keycode) KC_##stripped_keycode
-#elif defined ARSENIK_HOST_LAYOUT_AZERTY
+#elif defined KB_LAYOUT_QWERTY_LAFAYETTE
+#    define AS(stripped_keycode) KC_##stripped_keycode
+#elif defined KB_LAYOUT_AZERTY
 #    define AS(stripped_keycode) FR_##stripped_keycode
 #    define SHIFTED_NUMBERS
 #    include "keymap_french.h"
-#elif defined ARSENIK_HOST_LAYOUT_ERGOL
+#elif defined KB_LAYOUT_ERGOL
 #    define AS(stripped_keycode) EL_##stripped_keycode
 #    include "keymap_ergol.h"
 #    define ODK1_SEQUENCE tap_code(EL_ODK); tap_code(KC_1)
@@ -30,21 +32,21 @@
 #    define ODK3_SEQUENCE tap_code(EL_ODK); tap_code(KC_3)
 #    define ODK4_SEQUENCE tap_code(EL_ODK); tap_code(KC_4)
 #    define ODK5_SEQUENCE tap_code(EL_ODK); tap_code(KC_5)
-#elif defined ARSENIK_HOST_LAYOUT_BEPO
+#elif defined KB_LAYOUT_BEPO
 #    define AS(stripped_keycode) BP_##stripped_keycode
 #    define SHIFTED_NUMBERS
 #    include "keymap_bepo.h"
-#elif defined ARSENIK_HOST_LAYOUT_DVORAK
+#elif defined KB_LAYOUT_DVORAK
 #    define AS(stripped_keycode) DV_##stripped_keycode
 #    include "keymap_dvorak.h"
-#elif defined ARSENIK_HOST_LAYOUT_COLEMAK
+#elif defined KB_LAYOUT_COLEMAK
 #    define AS(stripped_keycode) CM_##stripped_keycode
 #    include "keymap_colemak.h"
-#elif defined ARSENIK_HOST_LAYOUT_WORKMAN
+#elif defined KB_LAYOUT_WORKMAN
 #    define AS(stripped_keycode) WK_##stripped_keycode
 #    include "keymap_workman.h"
 #else
-#    error "No `ARSENIK_HOST_LAYOUT_*` option was found or recognised"
+#    error "No `KB_LAYOUT_*` option was found or recognised"
 #endif
 
 #ifndef ODK1_SEQUENCE

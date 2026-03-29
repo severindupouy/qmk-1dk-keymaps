@@ -66,9 +66,9 @@ run_arsenik() {
         host_sed=""
         for l in QWERTY AZERTY ERGOL BEPO DVORAK COLEMAK WORKMAN; do
             if [ "$l" = "$layout" ]; then
-                host_sed+="s|^// *#define ARSENIK_HOST_LAYOUT_$l|#define ARSENIK_HOST_LAYOUT_$l|;"
+                host_sed+="s|^// *#define KB_LAYOUT_$l|#define KB_LAYOUT_$l|;"
             else
-                host_sed+="s|^#define ARSENIK_HOST_LAYOUT_$l|// #define ARSENIK_HOST_LAYOUT_$l|;"
+                host_sed+="s|^#define KB_LAYOUT_$l|// #define KB_LAYOUT_$l|;"
             fi
         done
         run_compile_test arsenik "host=$layout" "$host_sed"
@@ -110,12 +110,10 @@ run_selenium() {
     local host_sed=""
     for layout in ERGOL AZERTY QWERTY_LAFAYETTE QWERTY; do
         host_sed=""
-        for l in ERGOL AZERTY QWERTY_LAFAYETTE; do
+        for l in ERGOL AZERTY QWERTY_LAFAYETTE QWERTY; do
             host_sed+="s|^#define KB_LAYOUT_$l|// #define KB_LAYOUT_$l|;"
         done
-        if [ "$layout" != "QWERTY" ]; then
-            host_sed+="s|^// *#define KB_LAYOUT_$layout|#define KB_LAYOUT_$layout|;"
-        fi
+        host_sed+="s|^// *#define KB_LAYOUT_$layout|#define KB_LAYOUT_$layout|;"
         run_compile_test selenium "host=$layout" "$host_sed"
     done
 }

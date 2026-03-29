@@ -4,7 +4,7 @@
 #   -DEFINE = comment out (disable)
 #   omitted = keep default from options.h
 #
-# Defaults: ENABLE_SYMBOLS_LAYER=on, ARSENIK_HOST_LAYOUT_QWERTY=on
+# Defaults: ENABLE_SYMBOLS_LAYER=on, KB_LAYOUT_QWERTY=on
 #           everything else off.
 #
 # Constraints:
