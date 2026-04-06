@@ -57,3 +57,14 @@ selenium symbols=off hrm=on+mac                         | +VIM_NAVIGATION -ENABL
 selenium symbols=off hrm=on+mac left_space              | +VIM_NAVIGATION -ENABLE_SYMBOLS_LAYER +ENABLE_HRM +MAC_MODIFIERS +LEFT_HAND_SPACE
 selenium symbols=off hrm=on+mac restore_space           | +VIM_NAVIGATION -ENABLE_SYMBOLS_LAYER +ENABLE_HRM +MAC_MODIFIERS +RESTORE_SPACE
 selenium symbols=off hrm=on+mac left_space restore_space| +VIM_NAVIGATION -ENABLE_SYMBOLS_LAYER +ENABLE_HRM +MAC_MODIFIERS +LEFT_HAND_SPACE +RESTORE_SPACE
+
+# ── Layout variations ─────────────────────────────────────────────────
+# One compile test per non-default host layout to verify AS() expansion.
+
+layout azerty                             | -KB_LAYOUT_QWERTY +KB_LAYOUT_AZERTY
+layout ergol                              | -KB_LAYOUT_QWERTY +KB_LAYOUT_ERGOL
+layout erglace                            | -KB_LAYOUT_QWERTY +KB_LAYOUT_ERGLACE
+layout bepo                               | -KB_LAYOUT_QWERTY +KB_LAYOUT_BEPO
+layout dvorak                             | -KB_LAYOUT_QWERTY +KB_LAYOUT_DVORAK
+layout colemak                            | -KB_LAYOUT_QWERTY +KB_LAYOUT_COLEMAK
+layout workman                            | -KB_LAYOUT_QWERTY +KB_LAYOUT_WORKMAN

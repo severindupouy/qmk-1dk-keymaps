@@ -62,9 +62,9 @@ run_arsenik() {
 
     # Host layouts
     local host_sed=""
-    for layout in QWERTY AZERTY ERGOL BEPO DVORAK COLEMAK WORKMAN; do
+    for layout in QWERTY AZERTY ERGOL ERGLACE BEPO DVORAK COLEMAK WORKMAN; do
         host_sed=""
-        for l in QWERTY AZERTY ERGOL BEPO DVORAK COLEMAK WORKMAN; do
+        for l in QWERTY AZERTY ERGOL ERGLACE BEPO DVORAK COLEMAK WORKMAN; do
             if [ "$l" = "$layout" ]; then
                 host_sed+="s|^// *#define KB_LAYOUT_$l|#define KB_LAYOUT_$l|;"
             else
@@ -108,9 +108,9 @@ run_selenium() {
 
     # Host layouts
     local host_sed=""
-    for layout in ERGOL AZERTY QWERTY_LAFAYETTE QWERTY; do
+    for layout in ERGOL ERGLACE AZERTY BEPO QWERTY_LAFAYETTE QWERTY; do
         host_sed=""
-        for l in ERGOL AZERTY QWERTY_LAFAYETTE QWERTY; do
+        for l in ERGOL ERGLACE AZERTY BEPO QWERTY_LAFAYETTE QWERTY; do
             host_sed+="s|^#define KB_LAYOUT_$l|// #define KB_LAYOUT_$l|;"
         done
         host_sed+="s|^// *#define KB_LAYOUT_$layout|#define KB_LAYOUT_$layout|;"

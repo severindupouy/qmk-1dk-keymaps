@@ -65,3 +65,12 @@ ht_two_thumbs vim shift                   | +HT_TWO_THUMB_KEYS +VIM_NAVIGATION +
 ht_two_thumbs vim left_space              | +HT_TWO_THUMB_KEYS +VIM_NAVIGATION +LEFT_HAND_SPACE
 ht_two_thumbs shift left_space            | +HT_TWO_THUMB_KEYS +HRM_SHIFT +LEFT_HAND_SPACE
 ht_two_thumbs vim shift left_space        | +HT_TWO_THUMB_KEYS +VIM_NAVIGATION +HRM_SHIFT +LEFT_HAND_SPACE
+
+# ── Layout variations ─────────────────────────────────────────────────
+# One compile test per non-default host layout to verify AS() expansion.
+
+layout qwerty                             | -KB_LAYOUT_ERGOL +KB_LAYOUT_QWERTY
+layout qwerty_lafayette                   | -KB_LAYOUT_ERGOL +KB_LAYOUT_QWERTY_LAFAYETTE
+layout azerty                             | -KB_LAYOUT_ERGOL +KB_LAYOUT_AZERTY
+layout erglace                            | -KB_LAYOUT_ERGOL +KB_LAYOUT_ERGLACE
+layout bepo                               | -KB_LAYOUT_ERGOL +KB_LAYOUT_BEPO
