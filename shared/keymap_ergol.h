@@ -88,8 +88,6 @@
 #define EL_SUB0 ALGR(EL_0) // ₀
 #define EL_LPRN ALGR(EL_S) // (
 #define EL_RPRN ALGR(EL_E) // )
-#define EL_LT   ALGR(EL_C) // <
-#define EL_GT   ALGR(EL_O) // >
 
 // ALTGR  //Symbol layer //SHIFTED
 #define EL_SUP1 ALGR(S(EL_1)) // ¹
