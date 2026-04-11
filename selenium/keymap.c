@@ -7,9 +7,17 @@
 #define SC_COPY  C(AS(C))
 #define SC_PASTE C(AS(V))
 #define SC_REDO  C(AS(Y))
-#define SC_CLOSE C(AS(W))
+#define SC_CTL_W C(AS(W))
 #define SC_SAVE  C(AS(S))
 #define SC_ALL   C(AS(A))
+
+#ifdef MAC_MODIFIERS
+#    define SC_PREV G(KC_LBRC)
+#    define SC_NEXT G(KC_RBRC)
+#else
+#    define SC_PREV A(KC_LEFT)
+#    define SC_NEXT A(KC_RGHT)
+#endif
 
 enum arsenik_layers {
     _base,
@@ -70,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // 3. VimNav layer -- HJKL arrow cluster + GUI shortcuts (not accessible by default)
     [_vim_nav] = ONEDEADKEY_LAYOUT(
         __,  __,       __,        __,          __,          __,             __,       __,       __,       __,       __,      __,
-        __,  XX,       SC_CLOSE,  A(KC_LEFT),  A(KC_RGHT),  XX,             KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   KC_DEL,  __,
+        __,  XX,       SC_CTL_W,  SC_PREV,     SC_NEXT,     XX,             KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   KC_DEL,  __,
         __,  SC_ALL,   SC_SAVE,   S(KC_TAB),   KC_TAB,      XX,             KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  XX,      __,
         __,  SC_UNDO,  SC_CUT,    SC_COPY,     SC_PASTE,    SC_REDO,        XX,       XX,       XX,       XX,       XX,      __,
 

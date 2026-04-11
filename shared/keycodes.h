@@ -19,7 +19,8 @@
 #if defined KB_LAYOUT_QWERTY
 #    define AS(stripped_keycode) KC_##stripped_keycode
 #elif defined KB_LAYOUT_QWERTY_LAFAYETTE
-#    define AS(stripped_keycode) KC_##stripped_keycode
+#    define AS(stripped_keycode) QL_##stripped_keycode
+#    include "keymap_qwerty_lafayette.h"
 #elif defined KB_LAYOUT_AZERTY
 #    define AS(stripped_keycode) FR_##stripped_keycode
 #    define SHIFTED_NUMBERS
